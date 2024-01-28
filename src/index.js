@@ -1,24 +1,16 @@
 import "./style.css";
 import "./reset.css";
+import imageSlider from "./components/imageSlider";
 
 function component() {
-  const body = document.querySelector("body");
-  const element = document.createElement("div");
-  element.classList.add("welcome")
-  const text = document.createElement("h1");
-  text.classList.add("main-text")
-  text.innerText = "Thank you for using Marrow!";
-
-  const subtext = document.createElement("a");
-  subtext.href = "https://github.com/aishyuu/marrow"
-  subtext.target = "_blank"
-  subtext.innerText = "Getting Started"
-  subtext.classList.add("sub-text")
-
-
-  element.appendChild(text);
-  element.appendChild(subtext)
-  body.appendChild(element);
+  const photoData = [
+    "https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+    "https://i.redd.it/nhk8jg3psng71.jpg",
+    "https://i.redd.it/tn0k20exrnb51.jpg",
+    "https://i.redd.it/7aadu9ocfvx51.jpg",
+    "https://wallpapers.com/images/hd/1920-x-1080-hd-roxc8sshyi18tiiy.jpg"
+  ]
+  imageSlider(photoData)
 }
 
 component();
